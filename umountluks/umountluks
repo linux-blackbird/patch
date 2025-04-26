@@ -1,0 +1,9 @@
+#!/bin/bash
+# devel by null@2025
+# patch for systemd-crypsetup
+
+if [[ $(cat /proc/mounts | grep /run/systemd ) ]];then
+	umount -R /run/systemd/cryptsetup/keydev-*
+else
+	echo 'Blackbird Boot : no usb media keys'
+fi
