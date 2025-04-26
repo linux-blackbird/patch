@@ -1,0 +1,8 @@
+[Unit]
+Description=Unmounter Usbluks
+After=home.mount
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/umountluks
+Restart=on-failure
