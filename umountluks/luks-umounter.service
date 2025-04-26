@@ -6,3 +6,6 @@ After=home.mount
 Type=simple
 ExecStart=/usr/local/bin/umountluks
 Restart=on-failure
+
+[Install]
+WantedBy=graphical.target
